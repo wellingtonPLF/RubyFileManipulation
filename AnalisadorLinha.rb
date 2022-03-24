@@ -37,6 +37,11 @@ class AnalisadorLinha
         frequencia(@conteudo, @numero)
     end
 
+    def reset()
+        @@palavra = Array.new
+        @@qnt = Array.new
+    end
+
     def to_str
         index = @@qnt.each_with_index.max[1]
         return "Palavra: #{@@palavra[index]} and Qnt: #{@@qnt[index]}"
