@@ -19,11 +19,11 @@ class AnalisadorLinha
         @@qnt.append(valor)
         @@palavra.append(item)
     
-        for i in range(listar[proximo])
-            mylist.remove(item)
+        for i in 0..@@qnt[proximo]
+            mylist.delete(item)
         end
         
-        if (len(mylist) == 0):
+        if mylist.length() == 0
             return nil
         end
         proximo += 1

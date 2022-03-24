@@ -1,10 +1,11 @@
 #Main
+
 require_relative "AnalisadorLinha"
 
 a = File.readlines("ler.txt")
+results = Array.new
 
-linha = a[0].split(" ")
-
-resposta = AnalisadorLinha.new(linha, 0)
-
-puts "ok"
+for i in 0..a.length()
+    linha = a[i].split(" ")
+    results.append(AnalisadorLinha.new(linha, 0))
+end
