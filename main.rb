@@ -1,7 +1,10 @@
 #Main
+require_relative "AnalisadorLinha"
 
 a = File.readlines("ler.txt")
 
-a.each{
-    |a| puts "Current number is: #{AnalisadorLinha.new(a.split(" "), 0)}" 
-}
+linha = a[0].split(" ")
+
+resposta = AnalisadorLinha.new(linha, 0)
+
+puts "ok"

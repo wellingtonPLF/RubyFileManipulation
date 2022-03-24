@@ -11,17 +11,21 @@ class AnalisadorLinha
     end
 
     def frequencia (mylist, proximo)
-        for result in mylist:
-            if(item == result):
+        for result in mylist
+            if item == result
                 valor+=1
+            end
+        end
         @@qnt.append(valor)
         @@palavra.append(item)
     
-        for i in range(listar[proximo]):
-        mylist.remove(item)
+        for i in range(listar[proximo])
+            mylist.remove(item)
+        end
         
         if (len(mylist) == 0):
             return nil
+        end
         proximo += 1
         frequencia(mylist, proximo)
     end
