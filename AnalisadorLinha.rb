@@ -11,6 +11,9 @@ class AnalisadorLinha
     end
 
     def frequencia (mylist, proximo)
+        valor = 0
+        item = mylist[0]   
+
         for result in mylist
             if item == result
                 valor+=1
@@ -35,5 +38,7 @@ class AnalisadorLinha
     end
 
     def to_str
-        return "Palavra: #{@@palavra} and Qnt: #{@@qnt}"
+        index = @@qnt.each_with_index.max[1]
+        return "Palavra: #{@@palavra[index]} and Qnt: #{@@qnt[index]}"
     end
+end
